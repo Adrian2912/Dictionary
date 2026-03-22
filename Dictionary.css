@@ -66,18 +66,18 @@ body {
 
 .operations * {
     padding: 10px;
-    border:1px solid #000;
+    border:1px solid;
     border-radius: 5px;
 }
 
-#action {
+button {
     color: #fff;
     background: #f00;
     font-weight: bold;
-    border: none;
+    border-color: #f00;
 }
 
-#action:hover {
+button:hover {
     animation: move 1s infinite alternate linear;
     cursor: pointer;
 }
