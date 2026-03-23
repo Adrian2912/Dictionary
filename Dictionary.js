@@ -1,13 +1,17 @@
+function printText(text) {
+    document.querySelector("p").innerText = text;
+}
+
 function addWord() {
     let word = String(document.getElementById("theWord").value);
     if(word.length > 0) {
-        document.querySelector("p").innerText = "You entered the word: " + word;
+        printText("You entered the word: " + word);
         let item = document.createElement("li");
         item.innerText = word;
         document.querySelector("ul").appendChild(item);
         document.getElementById("theWord").value = null;
     } else {
-        document.querySelector("p").innerText = "Please enter a word";
+        printText("Please enter a word");
     }
 }
 
@@ -22,12 +26,12 @@ function searchWord() {
             }
         }
         if (appears) {
-            document.querySelector("p").innerText = "The word " + word + " is in the dictionary";
+            printText("The word " + word + " is in the dictionary");
         } else {
-            document.querySelector("p").innerText = "The word " + word + " is not in the dictionary";
+            printText("The word " + word + " is not in the dictionary");
         }
         document.getElementById("theWord").value = null;
     } else {
-        document.querySelector("p").innerText = "Please enter a word";
+        printText("Please enter a word");
     }
 }
